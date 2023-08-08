@@ -1,3 +1,21 @@
+function cubeNumber(number) {
+    if(typeof number !== "number"){
+        return "Please Provide Number as Input";
+    }
+    else {
+        return Math.pow(number,3);
+    }
+}
+
+function matchFinder(string1, string2) {
+    if (typeof string1 !== "string" || typeof string2 !== "string") {
+        return "Please Provide strings as Input";
+    }
+    else {
+        return string1.includes(string2);
+    }
+}
+
 function sortMaker(arr) {
     let myArray = [];
     // console.log(arr);
@@ -28,12 +46,4 @@ function sortMaker(arr) {
         return myArray;
     }
 }
-
-console.log(sortMaker([1,2]));
-console.log(sortMaker([2,5]));
-console.log(sortMaker([4,4]));
-console.log(sortMaker([4,-2]));
-console.log(sortMaker([4]));
-console.log(sortMaker("sti"));
-console.log(sortMaker(200));
 
