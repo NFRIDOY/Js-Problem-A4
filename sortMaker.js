@@ -1,22 +1,49 @@
 function sortMaker(arr) {
-    if(arr.length === 2) {
-        for(let i of arr) {
-            
-            if(arr[i] < 0) {
+    let max = 0;
+    let result = [];
+    if (arr.length === 2) {
+        for (let i=0; arr.length; i++) {
+
+            if (arr[i] < 0) {
                 return "Invalid Input";
             }
-            else if (arr[i] === arr[i+1]) {
-                console.log(arr);
-                console.log(arr[i]);
-                console.log(arr[i+1]);
-                return "equal";
+            // else if (arr[i] === max) {
+
+            //     return "equal";
+            // }
+            else {
+                if (i > max) {
+                    // max = i; 
+                    // result.push(max);
+                    // result.push(i+1);
+                    // return result;
+                    max = arr[i]; 
+                    result.push(max);
+                    result.push(arr[i+1]);
+                    return result;
+                }
+                else {
+                    // max = i;
+                    // result.push(i);
+                    // result.push(arr[i+1]);
+                    // return result;
+                    max = arr[i];
+                    result.push(arr[i]);
+                    result.push(arr[i+1]);
+                    return result;
+                    
+                }
+                
+                // else {
+                //     return -1;
+                // }
             }
-            else if (arr[i] < arr[i+1]) {
-                return [arr[i+1],arr[i]];
-            }
-            else if (arr[i] > arr[i+1]) {
-                return [arr[i],arr[i+1]];
-            }
+
+            // else if (arr[i] > arr[i+1]) {
+            //     return [arr[i],arr[i+1]];
+            // }
+
+
         }
     }
     else {
@@ -24,4 +51,6 @@ function sortMaker(arr) {
     }
 }
 
-console.log(sortMaker([1,2]));
+console.log(sortMaker([1, 2])); // 
+console.log(sortMaker([2, 1])); // 
+// console.log(sortMaker([2,2])); // 
