@@ -86,3 +86,30 @@ function canPay(changeArray, totalDue) {
         }
     }
 }
+
+// console.log(cubeNumber(3));
+// console.log(cubeNumber(4));
+// console.log(cubeNumber("jfghf"));
+
+// console.log(matchFinder("John Doe", "ohn"));
+// console.log(matchFinder("JavaScript", 1));
+
+// console.log(sortMaker([1,2]));
+// console.log(sortMaker([2,5]));
+// console.log(sortMaker([4,4]));
+// console.log(sortMaker([4,-2]));
+// console.log(sortMaker([4]));
+// console.log(sortMaker("sti"));
+// console.log(sortMaker(200));
+
+// let obj1 = { street: 10, house: "15A", society: "Earth Perfect" };
+// let obj2 = { street: 10, society: "Earth Perfect" };
+// let obj3 = { street: 10 };
+
+// console.log(findAddress(obj1));
+// console.log(findAddress(obj2));
+// console.log(findAddress(obj3));
+
+// console.log(canPay([1,5,5],10));
+// console.log(canPay([],10));
+// console.log(canPay("sfghsdfh",10));
