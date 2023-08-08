@@ -47,3 +47,48 @@ function sortMaker(arr) {
     }
 }
 
+function findAddress(obj) {
+    const properties = ['street', 'house', 'society'];
+    let output = '';
+
+    for (const prop of properties) {
+        if (obj.hasOwnProperty(prop)) {
+            output += obj[prop] + ',';
+        } else {
+            output += '__,';
+        }
+    }
+
+    // Remove the trailing comma
+    output = output.slice(0, -1);
+
+    return output;
+}
+
+function canPay(changeArray, totalDue) { 
+    let sum = 0;
+    if (Array.isArray(changeArray) === false) {
+        return "Please Provide An Array as Input";
+    }
+    else {
+        if (Array.isArray(changeArray) && changeArray.length === 0) {
+            // the array is defined and has no elements
+            return "Please Don't Provide An Emplty Array as Input";
+        }
+        // if (changeArray[0] === 0) {
+        //     return "Please Don't Provide An Emplty Array as Input";
+        // }
+        else {
+            for (const i of changeArray) {
+                sum += i;
+            }
+            if (sum >= totalDue) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+}
+
