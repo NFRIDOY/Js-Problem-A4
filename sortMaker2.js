@@ -1,6 +1,5 @@
 function sortMaker(arr) {
     let myArray = [];
-    // console.log(arr);
     if (Array.isArray(arr) !== true || typeof arr === "string") {
         return "Please Provide An Array";
     }
@@ -29,6 +28,8 @@ function sortMaker(arr) {
     }
 }
 
+console.log(sortMaker([0,1]));
+console.log(sortMaker([1,0]));
 console.log(sortMaker([1,2]));
 console.log(sortMaker([2,5]));
 console.log(sortMaker([4,4]));
